@@ -1,4 +1,4 @@
-﻿// cria função
+﻿// Cria função ExibirOpcoesDoMenu()
 
 void ExibirOpcoesDoMenu()
 {
