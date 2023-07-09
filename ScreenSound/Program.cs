@@ -50,49 +50,14 @@ void ExibirOpcoesDoMenu()
     if (opcoes.ContainsKey(opcaoEscolhidaNumerica))
     {
         Menu menuASerExibido = opcoes[opcaoEscolhidaNumerica];
-        menuASerExibido.Executar();
+        menuASerExibido.Executar(bandasRegistradas);
+        if (opcaoEscolhidaNumerica > 0) ExibirOpcoesDoMenu();
 
     } else
     {
 
         Console.WriteLine("Opção Inválida");
 
-    }
-
-    switch (opcaoEscolhidaNumerica)
-    {
-        case 1:
-            MenuRegistrarBanda menu1 = new();
-            menu1.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 2:
-            MenuRegistrarBanda menu2 = new();
-            menu2.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 3:
-            MenuMostrarBandasRegistradas menu3 = new();
-            menu3.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 4:
-            MenuAvaliarBanda menu4 = new();
-            menu4.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case 5:
-            MenuExibirDetalhes menu5 = new();
-            menu5.Executar(bandasRegistradas);
-            ExibirOpcoesDoMenu();
-            break;
-        case -1:
-            MenuSair menuSair = new();
-            menuSair.Executar(bandasRegistradas);
-            break;
-        default:
-            Console.WriteLine("Opção inválida");
-            break;
     }
 }
 
